@@ -113,14 +113,14 @@ export default {
     let { data } = await axios.get(
       `https://test.api.v1.alqurain.org/invitations/m/${this.$route.params.id}`
     );
-    if (data.status !== 200) {
-      this.$router.push("/");
-    }
+    // if (data.status !== 200) {
+    //   this.$router.push("/");
+    // }
     this.items = data;
     this.item = this.items.payload;
-    if (items.status !== 200) {
-      this.$router.push("/error");
-    }
+    // if (items.status !== 200) {
+    //   this.$router.push("/error");
+    // }
     console.log(this.item);
   },
   // methods: {
