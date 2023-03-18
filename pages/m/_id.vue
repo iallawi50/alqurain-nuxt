@@ -149,6 +149,14 @@ export default {
   //   this.getData();
   // },
   head() {
+  //       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  // <link href=" /img/favicon.png" rel="icon">
+  // <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+  //   <!-- Favicon -->
+  //   <link href="img/favicon.ico" rel="icon" />
+
+
+
     return {
       title: `أفراح ${this.item.groom_family} ${
         this.item.one_family ? "" : `و ${this.item.bride_family}`
@@ -156,18 +164,21 @@ export default {
       meta: [
         { hid: "og-type", property: "og:type", content: "website" },
         {
-          hid: "og-desc",
-          property: "og:description",
+          hid: "description",
+          property: "description",
           content: `يشرفنا دعوتكم لحضور مراسم حفل زفاف الفارس ${this.item.groom_name} على كريمة ${this.item.bride_name}`,
         },
         {
-          hid: "og-image",
-          property: "og:image",
+          hid: "apple-touch-icon",
+          property: "apple-touch-icon",
+          rel: "apple-touch-icon",
           content: `https://test.api.v1.alqurain.org/${this.item.groom_picture}`,
         },
         {
           hid: "favicon",
           property: "favicon",
+        rel: "icon",
+        type:"image/x-icon",
           content: `https://test.api.v1.alqurain.org/${this.item.groom_picture}`,
         },
       ],
